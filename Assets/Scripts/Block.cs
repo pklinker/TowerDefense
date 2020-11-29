@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
+
+    [Header("Game Play")]
     [SerializeField] bool StartingBlock = false;
     [SerializeField] bool EndingBlock = false;
+
+    [Header("Effects")]
     [SerializeField] Color exploredColor = Color.blue;
 
     // public is ok here because it is a data class

@@ -47,6 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToPan: {fileID: 2005312218849332591}
   targetEnemy: {fileID: 0}
+  guns:
+  - {fileID: 4724272123668369892}
+  attackRange: 1
 --- !u!1001 &2007161326252368264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56,7 +59,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6509147185586909292, guid: 10f2c4584dfc24549b97440ab174860c, type: 3}
       propertyPath: m_Name
-      value: Projectile
+      value: Gun
       objectReference: {fileID: 0}
     - target: {fileID: 6856721705368116423, guid: 10f2c4584dfc24549b97440ab174860c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -136,6 +139,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10f2c4584dfc24549b97440ab174860c, type: 3}
+--- !u!1 &4724272123668369892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6509147185586909292, guid: 10f2c4584dfc24549b97440ab174860c, type: 3}
+  m_PrefabInstance: {fileID: 2007161326252368264}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2007161327245028945
 PrefabInstance:
   m_ObjectHideFlags: 0

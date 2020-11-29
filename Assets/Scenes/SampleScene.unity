@@ -492,14 +492,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 607204067}
     m_Modifications:
-    - target: {fileID: 2130348020, guid: a567256f444540e4aa1834fad3aa1be9, type: 3}
-      propertyPath: m_Text
-      value: 4,0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5964849091939746956, guid: a567256f444540e4aa1834fad3aa1be9, type: 3}
-      propertyPath: StartingBlock
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7012185183817734282, guid: a567256f444540e4aa1834fad3aa1be9, type: 3}
       propertyPath: m_Name
       value: 'Cube: 4,0'
@@ -1135,6 +1127,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a567256f444540e4aa1834fad3aa1be9, type: 3}
+--- !u!198 &220705640 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7838200790164301015, guid: 6d39d37852736b045978055ed9f82cdb, type: 3}
+  m_PrefabInstance: {fileID: 992617504}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &229487938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1788,6 +1785,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4135240793724244, guid: 700ff3467e6f35c4d9307b685e8746d1, type: 3}
   m_PrefabInstance: {fileID: 327069586}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &333715075 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7838200790164301015, guid: 6d39d37852736b045978055ed9f82cdb, type: 3}
+  m_PrefabInstance: {fileID: 2007161327382415032}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &347888801
 PrefabInstance:
@@ -4493,23 +4495,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2128584191829609704, guid: 4e6df89e379bd944783ecefc3e48dea6, type: 3}
   m_PrefabInstance: {fileID: 8109989114231306158}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &765586185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765586181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a6739f066a06384cb123c6bff998b79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathExplosionAC: {fileID: 8300000, guid: 44e119511562c1241b12957c01f30b75, type: 3}
-  deathExplosion: {fileID: 3668149827683856570, guid: d24ae4def13f53342bcba7d4268d7aa3, type: 3}
-  parent: {fileID: 2026825090}
-  weaponStrength: 1
-  healthPoints: 1
 --- !u!65 &765586186
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4518,7 +4503,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765586181}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 15.000004, y: 14, z: 13.000003}
@@ -5685,6 +5670,14 @@ PrefabInstance:
       propertyPath: targetEnemy
       value: 
       objectReference: {fileID: 2026825090}
+    - target: {fileID: 323626445, guid: 6d39d37852736b045978055ed9f82cdb, type: 3}
+      propertyPath: attackRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 323626445, guid: 6d39d37852736b045978055ed9f82cdb, type: 3}
+      propertyPath: guns.Array.data[0]
+      value: 
+      objectReference: {fileID: 220705640}
     - target: {fileID: 2007161327672222579, guid: 6d39d37852736b045978055ed9f82cdb, type: 3}
       propertyPath: m_Name
       value: Tower (1)
@@ -10970,11 +10963,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4320373430648300, guid: eaf585f6d1c526346860421fbfbc3de4, type: 3}
   m_PrefabInstance: {fileID: 2014012612}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2026825088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5182076913174387270, guid: 4e6df89e379bd944783ecefc3e48dea6, type: 3}
+  m_PrefabInstance: {fileID: 8109989114231306158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2026825090 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8259321903196303935, guid: 4e6df89e379bd944783ecefc3e48dea6, type: 3}
   m_PrefabInstance: {fileID: 8109989114231306158}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &2026825091
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026825088}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2026825092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026825088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a6739f066a06384cb123c6bff998b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathExplosionAC: {fileID: 8300000, guid: 44e119511562c1241b12957c01f30b75, type: 3}
+  deathExplosion: {fileID: 3668149827683856570, guid: d24ae4def13f53342bcba7d4268d7aa3, type: 3}
+  parent: {fileID: 2026825090}
+  weaponStrength: 1
+  healthPoints: 10
 --- !u!1001 &2028610926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11040,28 +11071,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a567256f444540e4aa1834fad3aa1be9, type: 3}
---- !u!1 &2031651461 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1289340268263288, guid: 37ecf30468607124aafd21227190c343, type: 3}
-  m_PrefabInstance: {fileID: 555886864}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2031651465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031651461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a6739f066a06384cb123c6bff998b79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathExplosionAC: {fileID: 0}
-  deathExplosion: {fileID: 0}
-  parent: {fileID: 0}
-  weaponStrength: 1
-  healthPoints: 1
 --- !u!1001 &2040481263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11413,6 +11422,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 607204067}
     m_Modifications:
+    - target: {fileID: 2130348020, guid: a567256f444540e4aa1834fad3aa1be9, type: 3}
+      propertyPath: m_Text
+      value: -1,-2
+      objectReference: {fileID: 0}
     - target: {fileID: 5964849091939746956, guid: a567256f444540e4aa1834fad3aa1be9, type: 3}
       propertyPath: StartingBlock
       value: 1
@@ -11622,6 +11635,14 @@ PrefabInstance:
       propertyPath: targetEnemy
       value: 
       objectReference: {fileID: 2026825090}
+    - target: {fileID: 323626445, guid: 6d39d37852736b045978055ed9f82cdb, type: 3}
+      propertyPath: attackRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 323626445, guid: 6d39d37852736b045978055ed9f82cdb, type: 3}
+      propertyPath: guns.Array.data[0]
+      value: 
+      objectReference: {fileID: 333715075}
     - target: {fileID: 2007161327672222579, guid: 6d39d37852736b045978055ed9f82cdb, type: 3}
       propertyPath: m_Name
       value: Tower
@@ -11744,6 +11765,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2128584191829609704, guid: 4e6df89e379bd944783ecefc3e48dea6, type: 3}
+      propertyPath: m_Name
+      value: Body
+      objectReference: {fileID: 0}
     - target: {fileID: 5182076913174387270, guid: 4e6df89e379bd944783ecefc3e48dea6, type: 3}
       propertyPath: m_Name
       value: Enemy

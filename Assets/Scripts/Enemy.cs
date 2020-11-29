@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     AudioSource audioSource;
-    Collider boxCollider;
+  //  Collider boxCollider;
    // ScoreBoard scoreBoard;
 
     [Header("Effects")]
@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
 
     [Header("Scoring")]
     [Tooltip("Points to add to the player's score")] [SerializeField] int weaponStrength = 1;
-    [Tooltip("Enemy resiliance to damage")] [SerializeField] int healthPoints = 1;
+    [Tooltip("Enemy resiliance to damage")] [SerializeField] int healthPoints = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,20 +32,22 @@ public class Enemy : MonoBehaviour
 
     void AddNonTriggerBoxCollider()
     {
-        boxCollider = gameObject.AddComponent<BoxCollider>();
-        boxCollider.isTrigger = false;
+    //    boxCollider = gameObject.AddComponent<BoxCollider>();
+    //    boxCollider.isTrigger = false;
     }
 
     void OnParticleCollision(GameObject other)
     {
+        print("im hit");
         healthPoints--;
         if (healthPoints <= 0)
         {
           //  scoreBoard.ScoreHit(weaponStrength);
             GameObject fx = Instantiate(deathExplosion, transform.position, Quaternion.identity);
             fx.transform.parent = parent;
-            //        print("Particles collided with enemy " + gameObject.name);
+                    print("Particles collided with enemy " + gameObject.name);
             Destroy(gameObject);
+           
         }
     }
     // Update is called once per frame
