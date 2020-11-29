@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-        print("im hit");
+       // print("im hit");
         healthPoints--;
         if (healthPoints <= 0)
         {

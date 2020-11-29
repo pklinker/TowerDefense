@@ -25,18 +25,24 @@ public class Pathfinder : MonoBehaviour
 
     public List<Block> GetPath()
     {
+        if (path.Count == 0)
+        {
+            CalculatePath();
+        }
         return path;
     }
 
     // Start is called before the first frame update
     void Start()
     {
+    }
+
+    private void CalculatePath()
+    {
         LoadBlocks();
         BreadthFirstSearch();
         CreatePath();
     }
-
-  
 
     private void BreadthFirstSearch()
     {
