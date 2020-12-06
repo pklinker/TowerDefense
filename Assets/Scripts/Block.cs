@@ -15,19 +15,21 @@ public class Block : MonoBehaviour
     // public is ok here because it is a data class
     public bool isExplored = false; // 
     public Block exploredFrom;
+    public bool isPlaceable;
 
     const int gridSize = 10;
     Vector2Int gridPos;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        isPlaceable = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public int GetGridSize()
     {
@@ -35,7 +37,7 @@ public class Block : MonoBehaviour
     }
     public Vector2Int GetGridPos()
     {
-        return new Vector2Int(Mathf.RoundToInt(transform.position.x / gridSize) ,
+        return new Vector2Int(Mathf.RoundToInt(transform.position.x / gridSize),
          Mathf.RoundToInt(transform.position.z / gridSize));
     }
     public void SetTopColor(Color color)
@@ -45,8 +47,8 @@ public class Block : MonoBehaviour
         meshRenderer.material.color = color;
     }
     public bool IsStartingBlock()
-    { 
-        return StartingBlock; 
+    {
+        return StartingBlock;
     }
     public bool IsEndingBlock()
     {
@@ -57,5 +59,28 @@ public class Block : MonoBehaviour
     {
         SetTopColor(exploredColor);
         isExplored = true;
+    }
+
+    void OnMouseOver()
+    {
+        //   print("Mouse over: " + GetGridPos());
+        // detect mouse click
+        // if click
+     //   if (Input.GetMouseButtonDown(0)) // left mouse button
+     //   {
+     //       print("Grid: " + GetGridPos() + " clicked.");
+     //   }
+    }
+
+    private void OnMouseDown()
+    {
+        if (isPlaceable)
+        {
+            print("Mouse down " + GetGridPos());
+        }
+        else
+        {
+            print("Can't place block at: " + GetGridPos());
+        }
     }
 }

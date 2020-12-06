@@ -492,6 +492,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 607204067}
     m_Modifications:
+    - target: {fileID: 2130348020, guid: a567256f444540e4aa1834fad3aa1be9, type: 3}
+      propertyPath: m_Text
+      value: 4,0
+      objectReference: {fileID: 0}
     - target: {fileID: 7012185183817734282, guid: a567256f444540e4aa1834fad3aa1be9, type: 3}
       propertyPath: m_Name
       value: 'Cube: 4,0'
@@ -3191,7 +3195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79ecc13d56f1589438aaa65b136b6043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsBetweenSpawns: 1
+  secondsBetweenSpawns: 1.4
   enemyObject: {fileID: 5182076913174387270, guid: 4e6df89e379bd944783ecefc3e48dea6, type: 3}
   parent: {fileID: 597401256}
 --- !u!1001 &599197755
@@ -5312,18 +5316,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 607204067}
     m_Modifications:
-    - target: {fileID: 2130348020, guid: a567256f444540e4aa1834fad3aa1be9, type: 3}
-      propertyPath: m_Text
-      value: 0,0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5964849091939746956, guid: a567256f444540e4aa1834fad3aa1be9, type: 3}
-      propertyPath: StartingBlock
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5964849091939746956, guid: a567256f444540e4aa1834fad3aa1be9, type: 3}
-      propertyPath: EndingBlock
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7012185183817734282, guid: a567256f444540e4aa1834fad3aa1be9, type: 3}
       propertyPath: m_Name
       value: 'Cube: 0,0'

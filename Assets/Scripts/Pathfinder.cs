@@ -58,20 +58,26 @@ public class Pathfinder : MonoBehaviour
 
     private void CreatePath()
     {
-        path.Add(endingBlock);
+        SetAsPath(endingBlock);
+        
         Block previous = endingBlock.exploredFrom;
         while (previous != startingBlock)
         {
             // add intermediate waypoint
-            path.Add(previous.exploredFrom);
             previous = previous.exploredFrom;
+            SetAsPath(previous);
         }
         // add start waypoint
-        path.Add(previous);
+        SetAsPath(previous);
         // reverse list
         path.Reverse();
     }
 
+    private void SetAsPath(Block block)
+    {
+        block.isPlaceable = false;
+        path.Add(block);
+    }
     private void HaltIfEndBlockFound(Block searchCenter)
     {
         if (searchCenter.Equals(endingBlock))
@@ -127,6 +133,7 @@ public class Pathfinder : MonoBehaviour
             if (block.IsStartingBlock())
             {
                 startingBlock = block;
+                startingBlock.isPlaceable = false;
                
             } 
             if(block.IsEndingBlock()) // not using else if in case the starting block is the same as the ending block
@@ -136,6 +143,7 @@ public class Pathfinder : MonoBehaviour
         }
         Debug.Log("Loaded " + grid.Count + " blocks.");
     }
+
 
     private static void SetTopColor(Block block)
     {

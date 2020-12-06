@@ -16,7 +16,7 @@ public class Tower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FireGun(false);
+        Shoot(false);
     }
 
     // Update is called once per frame
@@ -54,16 +54,16 @@ public class Tower : MonoBehaviour
            // print(" enemy distance is " + enemyDistance);
             if (enemyDistance <= attackRange) 
             {
-                FireGun(true);
+                Shoot(true);
             }
         }
         else
         {
-            FireGun(false);
+            Shoot(false);
         }
     }
 
-    private void FireGun(bool active)
+    private void Shoot(bool active)
     {
         foreach (ParticleSystem gun in guns)
         {
