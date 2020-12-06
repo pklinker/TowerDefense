@@ -12,10 +12,16 @@ public class Block : MonoBehaviour
     [Header("Effects")]
     [SerializeField] Color exploredColor = Color.blue;
 
+    [Header("Features")]
+    [SerializeField] GameObject towerObject;
+    [SerializeField] Transform parent;
+    [SerializeField] Vector3 offset;
+
     // public is ok here because it is a data class
     public bool isExplored = false; // 
     public Block exploredFrom;
-    public bool isPlaceable;
+    public bool isPlaceable = true;
+    private GameObject tower;
 
     const int gridSize = 10;
     Vector2Int gridPos;
@@ -76,7 +82,11 @@ public class Block : MonoBehaviour
     {
         if (isPlaceable)
         {
-            print("Mouse down " + GetGridPos());
+            Vector3 newPosition = transform.position + offset;
+            //            print("Mouse down " + GetGridPos());
+            tower = Instantiate(towerObject, newPosition, Quaternion.identity);
+            tower.transform.parent = parent;
+            isPlaceable = false;
         }
         else
         {

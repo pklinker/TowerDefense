@@ -157,6 +157,9 @@ MonoBehaviour:
   StartingBlock: 0
   EndingBlock: 0
   exploredColor: {r: 0, g: 0, b: 1, a: 1}
+  towerObject: {fileID: 2007161327672222579, guid: 6d39d37852736b045978055ed9f82cdb, type: 3}
+  parent: {fileID: 0}
+  offset: {x: 0, y: 6, z: 0}
   isExplored: 0
   exploredFrom: {fileID: 0}
   isPlaceable: 0
