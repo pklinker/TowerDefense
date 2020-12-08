@@ -25,7 +25,7 @@ public class EnemyMovement : MonoBehaviour
             // wait for a second
             yield return new WaitForSeconds(1f);
         }
-        print("Ending patrol.");
+       // print("Ending patrol.");
     }
     
      // Update is called once per frame

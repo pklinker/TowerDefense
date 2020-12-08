@@ -56,6 +56,9 @@ public class Pathfinder : MonoBehaviour
         }
     }
 
+    /**
+     * Reverse the breadth first search results to create the path, starting at the ending block and ending at the starting block.
+     */
     private void CreatePath()
     {
         SetAsPath(endingBlock);
@@ -64,8 +67,8 @@ public class Pathfinder : MonoBehaviour
         while (previous != startingBlock)
         {
             // add intermediate waypoint
-            previous = previous.exploredFrom;
             SetAsPath(previous);
+            previous = previous.exploredFrom;
         }
         // add start waypoint
         SetAsPath(previous);

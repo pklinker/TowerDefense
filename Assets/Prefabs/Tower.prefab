@@ -134,7 +134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8582801512693056863, guid: 10f2c4584dfc24549b97440ab174860c, type: 3}
       propertyPath: CollisionModule.minKillSpeed
-      value: 150
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10f2c4584dfc24549b97440ab174860c, type: 3}

@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     [Tooltip("Death explose sound effect")] [SerializeField] AudioClip deathExplosionAC;
     [SerializeField] GameObject deathExplosion;
     [SerializeField] Transform parent;
+    [SerializeField] ParticleSystem hitParticles;
 
     [Header("Scoring")]
     [Tooltip("Points to add to the player's score")] [SerializeField] int weaponStrength = 1;
@@ -45,9 +46,14 @@ public class Enemy : MonoBehaviour
           //  scoreBoard.ScoreHit(weaponStrength);
             GameObject fx = Instantiate(deathExplosion, transform.position, Quaternion.identity);
             fx.transform.parent = parent;
-                    print("Particles collided with enemy " + gameObject.name);
+            //print("Particles collided with enemy " + gameObject.name);
             Destroy(gameObject);
            
+        }
+        else
+        {
+            hitParticles.Play();
+            print("Enemy hit.");
         }
     }
     // Update is called once per frame
